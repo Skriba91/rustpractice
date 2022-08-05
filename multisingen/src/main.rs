@@ -1,35 +1,15 @@
 /* Rust PI constant --> std::f64::consts::PI;
  * Convert degrees to radians --> radians = degrees * PI / 180.0;
+ * Allication 2D vecotr -> let vector2d: Vec<Vec<f64>> = vec![vec![0.0; 2]; 10];
  */
 
-use num::Complex;
-//use std::fs;
-
-//use std::io;
-use std::io::prelude::*;
-//use std::fs::File;
-use std::fs::OpenOptions;
-
-struct Point<T> {
-    x: T,
-    y: T,
-}
+ mod multisine;
 
 fn main() {
-    let pi = std::f64::consts::PI;
-    let a = (pi/180.0*30.0).sin();
-    println!("Sin(30) = {}", a);
-
-    let complex_float = Complex::new(10.1, 20.1);
-
-    println!("Complex float: {}", complex_float);
-
-    let point = Point { x: 1, y: 2 };
-    let mut f = OpenOptions::new().read(true).write(true).create(true).open("foo.txt")?;
-
-    f.write_all(&point)?;
-    let mut b: Complex<f64> = Complex::new(0.0, 0.0);
-    //fs::read("numbers.dat", &b);
-    println!("Complex float: {}", b);
+    //let vector2d: Vec<Vec<f64>> = vec![vec![0.0; 2]; 10];
+    let mut vector2d: [[f64; 2]; 10] = [[0.0; 2]; 10];
+    vector2d[2][1] = 1.0;
+    println!("{:?}", vector2d);
+    println!("Hello, world!");
 
 }
