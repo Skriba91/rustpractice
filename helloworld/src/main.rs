@@ -11,8 +11,9 @@
 //mod pointer_ref;
 //mod structs;
 //mod enums;
-mod cli;
+//mod cli;
+mod random;
 
 fn main() {
-    cli::run();
+    random::run();
 }
