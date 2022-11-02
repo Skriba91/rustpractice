@@ -44,4 +44,21 @@ pub fn run() {
 
     println!("Numbers Vec: {:?}", numbers);
 
+    //Vector can be extended with another vector or array
+    let mut vector_to_extend: Vec<i32> = vec![1, 2, 3];
+    let word: u16 = 0xABCD;
+    let word_in_bytes = word.to_be_bytes();
+    println!("Word in bytes: {:?}", word_in_bytes);
+    println!("Extended Vec: {:?}", vector_to_extend);
+    vector_to_extend.extend([3, 4, 5]);
+    println!("Extended Vec: {:?}", vector_to_extend);
+    
+    /*let mut a = vec![1, 2, 3];
+    let b = vec![4, 5, 6];
+
+    a.extend(&b);
+    assert_eq!(a, [1, 2, 3, 4, 5, 6]);
+    assert_eq!(b, [4, 5, 6]);
+    println!("Extended Vec: {:?}", a);*/
+
 }

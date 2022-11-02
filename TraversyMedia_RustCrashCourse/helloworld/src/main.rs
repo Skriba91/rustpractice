@@ -4,7 +4,7 @@
 //mod strings;
 //mod tuples;
 //mod arrays;
-//mod vectors;
+mod vectors;
 //mod conditionals;
 //mod loops;
 //mod functions;
@@ -12,8 +12,8 @@
 //mod structs;
 //mod enums;
 //mod cli;
-mod random;
+//mod random;
 
 fn main() {
-    random::run();
+    vectors::run();
 }
